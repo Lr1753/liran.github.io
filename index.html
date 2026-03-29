@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山东图南储能科技有限公司 - 全场景储能解决方案提供商</title>
+<meta name="description" content="山东图南储能科技，8年储能行业经验，80+项目验证，标准产品十年质保，提供工商业用户侧储能、共享集装箱储能、集中式储能电站EPC一站式服务。相同配置收益比同行高10%-15%。免费上门勘测。">
+<meta name="keywords" content="山东储能,工商业储能,用户侧储能,共享储能,储能EPC,图南储能,十年质保">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* 头部导航 */
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a365d;
+}
+.logo span {
+    color: #3182ce;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #3182ce;
+}
+/* 首屏banner */
+.banner {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+    padding: 160px 0 100px;
+    text-align: center;
+    margin-top: 70px;
+}
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.banner h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+.banner p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+.btn {
+    display: inline-block;
+    background: #3182ce;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #2b6cb0;
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    margin-left: 15px;
+}
+.btn-outline:hover {
+    background: white;
+    color: #1a365d;
+}
+/* 关于我们 */
+.section {
+    padding: 80px 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #1a365d;
+}
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.about h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+.advantages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+.advantage-item {
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 5px;
+}
+.advantage-item strong {
+    color: #3182ce;
+}
+/* 产品中心 */
+.products {
+    background: #f7fafc;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.product-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1a365d;
+}
+.product-card .image-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #e2e8f0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #718096;
+    border: 2px dashed #cbd5e0;
+}
+.product-card ul {
+    list-style: none;
+    margin: 15px 0;
+}
+.product-card li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+/* 收益分析 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+th {
+    background: #1a365d;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #f7fafc;
+}
+/* 服务流程 */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+.step-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f7fafc;
+    border-radius: 10px;
+}
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #3182ce;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+/* 常见问题 */
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.faq-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1a365d;
+}
+/* 联系我们 */
+.contact {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+}
+.contact .section-title {
+    color: white;
+}
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.contact-item {
+    padding: 30px;
+}
+.contact-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+/* 页脚 */
+footer {
+    background: #1a202c;
+    color: #a0aec0;
+    text-align: center;
+    padding: 30px 0;
+}
+/* 响应式 */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .banner h1 {
+        font-size: 32px;
+    }
+    .banner h2 {
+        font-size: 18px;
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+    .btn-outline {
+        display: block;
+        margin: 15px auto 0;
+        width: fit-content;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">山东图南<span>储能</span></div>
+            <ul>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#products">产品中心</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="banner">
+    <div class="container">
+        <h1>让每一度清洁能源，创造百倍价值</h1>
+        <h2>全场景储能解决方案提供商 | 源网荷储一体化 | 智慧+安全全系统服务</h2>
+        <p>八年行业沉淀 · 八十项目验证 · 十年品质保障</p>
+        <a href="#contact" class="btn">免费上门勘测</a>
+        <a href="#products" class="btn btn-outline">查看产品</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">关于我们</h2>
+        <div class="about">
+            <div>
+                <h3>山东图南储能科技有限公司</h3>
+                <p>前身为如皋本土企业，始创于2017年，2025年完成股份制改革，成功转型为国内首家全场景储能解决方案提供商。我们依托长三角制造产业集群优势，在全国范围内已布局超过<strong>80个项目</strong>，涵盖三个不同应用场景的商业化运营，是为数不多真正实现<strong>全自动化运维、全设备实景化系统、一站式解决方案</strong>，成熟应用于不同场景的商业化储能公司。</p>
+                <div class="advantages">
+                    <div class="advantage-item">
+                        <strong>🔧 技术优势</strong>
+                        <p>三大核心技术，筑牢产品根基</p>
+                    </div>
+                    <div class="advantage-item">
+                        <strong>🏭 工厂优势</strong>
+                        <p>80亩现代化基地，源头直供品质可控</p>
+                    </div>
+                    <div class="advantage-item">
+                        <strong>🤝 服务优势</strong>
+                        <p>一站式全流程服务，7×24小时响应</p>
+                    </div>
+                    <div class="advantage-item">
+                        <strong>✅ 十年质保承诺</strong>
+                        <p>行业领先售后，让您安心无忧</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; background: #edf2f7; padding: 20px; border-radius: 8px;">
+                    <h3 style="margin-bottom: 15px; color: #1a365d;">🔧 三大核心技术优势</h3>
+                    <p><strong>• 主动均衡技术：</strong>双向可控能量均衡，无损耗移动式均衡，均衡电流达2A，箱内箱间同步均衡，均衡效率超85%，保障电芯一致性，显著延长设备使用寿命。</p>
+                    <p style="margin-top: 10px;"><strong>• 模块化架构：</strong>基于模块化开发，兼具开发速度与成本优势，标准化、参数化设计，可靠性高、拓扑灵活，可快速适配工商储、户储及各类特殊场景定制需求。</p>
+                    <p style="margin-top: 10px;"><strong>•「云边端」一体化管理：</strong>数字上云、服务下沉，通过移动APP+远程云服务平台+智能硬件终端，实现设备全生命周期可视化管理，真正做到无人值守、远程监控、异常预警。</p>
+                </div>
+
+                <div style="margin-top: 20px; background: #edf2f7; padding: 20px; border-radius: 8px;">
+                    <h3 style="margin-bottom: 15px; color: #1a365d;">🏭 工厂生产优势</h3>
+                    <p>80亩现代化生产基地，全流程自动化生产，从原材料筛选、电芯组装到成品检测，<strong>三重严苛把关</strong>，MTBF（平均无故障时间）超10万小时；自有钣金箱体研发制造能力，减少中间环节，实现品质与价格双优势。</p>
+                </div>
+
+                <div style="margin-top: 20px; background: #edf2f7; padding: 20px; border-radius: 8px;">
+                    <h3 style="margin-bottom: 15px; color: #1a365d;">🤝 全流程服务优势</h3>
+                    <p>专业团队提供从方案设计、产品选型、安装调试到售后运维的全流程服务，支持定制化需求对接，<strong>7×24小时售后响应</strong>，让客户选型省心、使用放心、运维安心。</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/tunan-100kwh.png" alt="山东图南储能产品照片" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="products" class="section products">
+    <div class="container">
+        <h2 class="section-title">产品中心</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <h3>工商业用户侧储能柜</h3>
+                <img src="images/tunan-100kwh.png" alt="工商业用户侧储能柜" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 20px;">
+                <p>专为工商业用户设计的一体化柜式储能，集成电池、BMS、PCS、温控于一体，2A双重计费设计，峰谷套利效率高达<strong>85%</strong>，即插即用安装便捷。</p>
+                <ul>
+                    <li>容量范围：64kWh - 241kWh</li>
+                    <li>循环寿命：＞6000次</li>
+                    <li>防护等级：IP54</li>
+                    <li>工作温度：-20℃ ~ 55℃</li>
+                </ul>
+                <p><strong>适用：</strong>工厂、商场、写字楼、数据中心、中小型工商业用户</p>
+            </div>
+
+            <div class="product-card">
+                <h3>共享集装箱式储能系统</h3>
+                <img src="images/tunan-241kwh.png" alt="共享集装箱式储能系统" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 20px;">
+                <p>标准化20呎/40呎集装箱设计，工厂预制，现场仅需接线，安装周期缩短70%，支持大容量阵列集成，智能自动调控。</p>
+                <ul>
+                    <li>容量范围：241kWh - 2000kWh</li>
+                    <li>循环寿命：＞8000次</li>
+                    <li>风冷/水冷：可选配置</li>
+                    <li>工作温度：-30℃ ~ 60℃</li>
+                </ul>
+                <p><strong>适用：</strong>发电侧、电网侧共享储能电站</p>
+            </div>
+
+            <div class="product-card">
+                <h3>集中式储能电站EPC总承包</h3>
+                <img src="images/product0.png" alt="集中式储能电站项目" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 20px;">
+                <p>为大型用户侧储能电站提供<strong>一站式EPC总承包服务</strong>，核心部件全部自主生产，从方案设计到交付运营全程交付。</p>
+                <ul>
+                    <li>核心部件自主生产</li>
+                    <li>性价比高同行10%-15%</li>
+                    <li>支持光伏+储能一体化</li>
+                    <li>标准产品十年质保</li>
+                </ul>
+                <p><strong>适用：</strong>大型工业园区、工商业园区集中式电站</p>
+            </div>
+
+            <div class="product-card">
+                <h3>户用储能一体机</h3>
+                <img src="images/product1.png" alt="户用储能一体机" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 20px;">
+                <p>专为家庭光伏用户设计，安装简单即插即用，实现自发自用、峰谷套利、停电备用三位一体。</p>
+                <ul>
+                    <li>容量范围：5kWh - 15kWh</li>
+                    <li>壁挂/落地：可选</li>
+                    <li>APP远程监控</li>
+                    <li>停电自动切换</li>
+                </ul>
+                <p><strong>适用：</strong>家庭别墅、分布式光伏用户</p>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 50px;">
+            <h3 style="text-align: center; margin-bottom: 30px; font-size: 24px; color: #1a365d;">用户侧储能柜 详细规格参数</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>产品型号</th>
+                        <th>额定容量</th>
+                        <th>额定电压</th>
+                        <th>额定功率</th>
+                        <th>外形尺寸(mm)</th>
+                        <th>重量</th>
+                        <th>适用场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TN-C-64</td>
+                        <td>64kWh</td>
+                        <td>380V</td>
+                        <td>30kW</td>
+                        <td>1200×800×2000</td>
+                        <td>~1200kg</td>
+                        <td>小型商户、民宿、办公</td>
+                    </tr>
+                    <tr>
+                        <td>TN-C-80</td>
+                        <td>80kWh</td>
+                        <td>380V</td>
+                        <td>50kW</td>
+                        <td>1400×800×2000</td>
+                        <td>~1500kg</td>
+                        <td>中型商铺、餐饮、厂房</td>
+                    </tr>
+                    <tr>
+                        <td>TN-C-100</td>
+                        <td>100kWh</td>
+                        <td>380V</td>
+                        <td>60kW</td>
+                        <td>1400×800×2000</td>
+                        <td>~1800kg</td>
+                        <td>中型工厂、办公楼</td>
+                    </tr>
+                    <tr>
+                        <td>TN-C-112</td>
+                        <td>112kWh</td>
+                        <td>380V</td>
+                        <td>70kW</td>
+                        <td>1600×800×2100</td>
+                        <td>~2100kg</td>
+                        <td>常规工业、酒店</td>
+                    </tr>
+                    <tr>
+                        <td>TN-C-120</td>
+                        <td>120kWh</td>
+                        <td>380V</td>
+                        <td>75kW</td>
+                        <td>1600×800×2100</td>
+                        <td>~2200kg</td>
+                        <td>常规工业、商业综合体</td>
+                    </tr>
+                    <tr>
+                        <td>TN-C-215</td>
+                        <td>215kWh</td>
+                        <td>380V</td>
+                        <td>100kW</td>
+                        <td>2400×800×2200</td>
+                        <td>~3800kg</td>
+                        <td>大型工厂、商超</td>
+                    </tr>
+                    <tr>
+                        <td>TN-C-241</td>
+                        <td>241kWh</td>
+                        <td>380V</td>
+                        <td>120kW</td>
+                        <td>2400×800×2200</td>
+                        <td>~4200kg</td>
+                        <td>大型数据中心、工业园区</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="text-align: center; margin: 40px 0 30px; font-size: 24px; color: #1a365d;">共享集装箱储能 详细规格参数</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>产品型号</th>
+                        <th>额定容量</th>
+                        <th>额定电压</th>
+                        <th>额定功率</th>
+                        <th>集装箱尺寸</th>
+                        <th>重量</th>
+                        <th>适用场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TN-CS-241</td>
+                        <td>241kWh/柜</td>
+                        <td>1000V</td>
+                        <td>125kW</td>
+                        <td>20呎标准柜</td>
+                        <td>~15吨</td>
+                        <td>小型共享储能电站</td>
+                    </tr>
+                    <tr>
+                        <td>TN-CS-261</td>
+                        <td>261kWh/柜</td>
+                        <td>1000V</td>
+                        <td>150kW</td>
+                        <td>20呎标准柜</td>
+                        <td>~16吨</td>
+                        <td>用户侧大型电站</td>
+                    </tr>
+                    <tr>
+                        <td>TN-CS-500</td>
+                        <td>500kWh/柜</td>
+                        <td>1000V</td>
+                        <td>250kW</td>
+                        <td>20呎标准柜</td>
+                        <td>~22吨</td>
+                        <td>中型共享电站</td>
+                    </tr>
+                    <tr>
+                        <td>TN-CS-1000</td>
+                        <td>1000kWh/柜</td>
+                        <td>1000V</td>
+                        <td>500kW</td>
+                        <td>40呎标准柜</td>
+                        <td>~35吨</td>
+                        <td>大型电网侧电站</td>
+                    </tr>
+                    <tr>
+                        <td>TN-CS-2000</td>
+                        <td>2000kWh/柜</td>
+                        <td>1000V</td>
+                        <td>1000kW</td>
+                        <td>40呎标准柜</td>
+                        <td>~60吨</td>
+                        <td>特大容量电站</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">投资收益分析</h2>
+        <p style="text-align: center; margin-bottom: 30px;">以山东工商业峰谷价差0.7元/kWh计算：</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>项目容量</th>
+                    <th>峰谷价差</th>
+                    <th>预计年收益</th>
+                    <th>静态回收期</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>100kWh</td>
+                    <td>0.7元/kWh</td>
+                    <td>~1.8-2.2万元</td>
+                    <td>5-6年</td>
+                </tr>
+                <tr>
+                    <td>1MWh</td>
+                    <td>0.7元/kWh</td>
+                    <td>~18-22万元</td>
+                    <td>5-6年</td>
+                </tr>
+                <tr>
+                    <td>10MWh</td>
+                    <td>0.7元/kWh</td>
+                    <td>~180-220万元</td>
+                    <td>5-6年</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center; font-size: 16px; color: #3182ce; font-weight: bold; margin-top: 10px;">图南优势：相同配置比同行收益高 10%-15%</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">服务流程</h2>
+        <div class="steps">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h3>客户咨询</h3>
+                <p>电话微信联系我们</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h3>免费勘测</h3>
+                <p>工程师上门看现场</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h3>方案报价</h3>
+                <p>定制方案+透明报价</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h3>签订合同</h3>
+                <p>确认条款安排生产</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">5</div>
+                <h3>安装调试</h3>
+                <p>专业团队施工安装</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">6</div>
+                <h3>交付运营</h3>
+                <p>并网发电开始赚钱</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <p><strong>交付周期承诺：</strong>小型用户侧项目7-15天并网，中型集中式电站20-30天完工</p>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="section products">
+    <div class="container">
+        <h2 class="section-title">常见问题</h2>
+        <div class="faq-item">
+            <h4>Q: 安装储能对我的企业有什么好处？</h4>
+            <p>A: 简单来说四大好处：1）省钱：峰谷价差套利直接降低电费开支；2）赚钱：参与需求响应获得额外补贴；3）保障：停电时作为备用电源，减少停产损失；4）环保：消纳清洁能源，助力企业双碳目标。</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q: 投资回本需要几年？</h4>
+            <p>A: 根据当地峰谷价差大小不同，回收期一般在<strong>5-6年</strong>左右，储能系统设计寿命超过15年，回本之后就是纯收益。我们智能优化让收益更高，回收期比同行更短。</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q: 安全吗？会发生火灾爆炸吗？</h4>
+            <p>A: 我们全部采用<strong>磷酸铁锂电池</strong>，热稳定性比三元锂电池好很多，加上三级安全防护：电芯级过充过放保护、模组级温度监测、舱体烟雾+温度双重探测、集成自动气体灭火系统，从设计到生产多重保障，安全性有保障。</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q: 图南储能质保几年？</h4>
+            <p>A: 我们对标准产品提供<strong>十年质保</strong>，这在行业内是非常少见的承诺：第一年非人为质量问题免费更换新机，第二到第十年免费维修更换故障部件，十年后提供终身维护，只收材料成本费。我们敢保十年，是对产品品质有信心。</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q: 你们和其他品牌相比有什么优势？</h4>
+            <p>A: 三大核心优势：<br>1）<strong>收益更高</strong>：智能优化，相同容量收益比同行高10%-15%<br>2）<strong>质保更长</strong>：标准产品我们保十年，同行一般只保5年<br>3）<strong>服务更快</strong>：本地团队，7×24小时响应，48小时内到场维修</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section contact">
+    <div class="container">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>公司名称</h3>
+                <p style="font-size: 18px;">山东图南储能科技有限公司</p>
+            </div>
+            <div class="contact-item">
+                <h3>公司地址</h3>
+                <p>山东省<br><strong style="font-size: 16px;">请填写你的详细地址</strong></p>
+            </div>
+            <div class="contact-item">
+                <h3>电话/微信</h3>
+                <p style="font-size: 24px; margin-top: 10px;"><strong>请填写你的电话</strong></p>
+            </div>
+            <div class="contact-item">
+                <h3>服务承诺</h3>
+                <p>免费上门勘测<br>定制专属方案</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2025 山东图南储能科技有限公司. All rights reserved.</p>
+        <p style="margin-top: 10px;">全场景储能解决方案提供商 | 八年行业沉淀 · 八十项目验证 · 十年品质保障</p>
+    </div>
+</footer>
+
+</body>
+</html>
